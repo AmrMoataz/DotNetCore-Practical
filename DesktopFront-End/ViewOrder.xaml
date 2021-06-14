@@ -1,0 +1,25 @@
+﻿<Window x:Class="DesktopFront_End.ViewOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopFront_End"
+        mc:Ignorable="d"
+         Title="Edit Product" WindowStyle="None" Height="450" Width="350" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Make New Order" FontStyle="Italic" FontSize="20" Margin="20"/>
+        <TextBlock Grid.Row="1" Text="Select multiple products from the list below" FontSize="13" Margin="20,0,0,0"/>
+        <ListView SelectionMode="Multiple" Name="productsList" Grid.Row="2" Margin="20"></ListView>
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="3" Margin="20">
+            <Button Name="orderbtn" Content="Order" Margin="5" Padding="10" Width="70" HorizontalAlignment="Left" Click="orderbtn_Click"/>
+            <Button Name="cancelbtn" Content="cancel" Margin="5" Padding="10" Width="70" HorizontalAlignment="Left" Click="cancelbtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
